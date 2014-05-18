@@ -1,10 +1,13 @@
-package Machine;
+package machine;
 
 public class MachineDisplay implements Display {
 
-	public void show(String string) {
-		// TODO Auto-generated method stub
+	public String show(String message) {
+		return message;
+	}
 
+	public String showChange(double change) {
+		return "Change: $" + change;
 	}
 
 }

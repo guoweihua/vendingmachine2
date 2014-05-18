@@ -1,5 +1,7 @@
-package Machine;
+package machine;
 
 public interface Display {
-    public void show(String string); 
+    public String show(String message);
+
+	public String showChange(double change); 
 }
