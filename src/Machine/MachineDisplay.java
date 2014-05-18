@@ -6,8 +6,8 @@ public class MachineDisplay implements Display {
 		return message;
 	}
 
-	public String showChange(double change) {
-		return "Change: $" + change;
+	public String showMoney(double amount) {
+		return "Amount: $" + amount;
 	}
 
 }

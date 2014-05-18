@@ -21,7 +21,7 @@ public class DisplayTest {
 	
 	@Test
 	public void shouldShowChangeMessage() {
-		assertEquals("Change: $0.75", display.showChange(.75));
+		assertEquals("Amount: $0.75", display.showMoney(.75));
 	}
 	
 }
