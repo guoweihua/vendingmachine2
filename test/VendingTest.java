@@ -1,18 +1,18 @@
+import machine.Display;
+import machine.ItemHandler;
+import machine.Machine;
+import machine.MoneyHandler;
+
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 
 import static org.mockito.Mockito.*;
 
 import org.mockito.MockitoAnnotations;
 
-import Machine.Display;
-import Machine.ItemHandler;
-import Machine.Machine;
-import Machine.MoneyHandler;
 
 public class VendingTest {
     @InjectMocks
