@@ -12,4 +12,9 @@ public class MachineItemHandler implements ItemHandler {
 		machineBin.listItems();
 	}
 
+	public void dispenseChips(Chips chips) {
+		machineBin.addItem(chips);
+		machineBin.listItems();
+	}
+
 }

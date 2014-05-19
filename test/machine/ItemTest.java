@@ -12,6 +12,9 @@ public class ItemTest {
     @Mock
     MachineBin machineBin;
     
+    @Mock
+    Chips chips;
+    
 	private ItemHandler handler;
 	
     @Before
@@ -25,6 +28,13 @@ public class ItemTest {
 		handler.dispenseItem();
 		
 		verify(machineBin).listItems();	
+	}
+	
+	@Test
+	public void shouldAddItemsToBin() {
+		handler.dispenseChips(chips);
+		
+		verify(machineBin).addItem(chips);
 	}
 	
 	

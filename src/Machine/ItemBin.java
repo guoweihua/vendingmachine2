@@ -6,4 +6,5 @@ public interface ItemBin {
 
 	public LinkedList<Item> listItems();
 	
+	public void addItem(Item item);
 }

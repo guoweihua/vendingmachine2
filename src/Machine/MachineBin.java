@@ -8,4 +8,8 @@ public class MachineBin implements ItemBin {
 		return null;
 	}
 
+	public void addItem(Item item) {
+		
+	}
+
 }
