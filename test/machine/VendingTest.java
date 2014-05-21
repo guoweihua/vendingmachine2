@@ -51,7 +51,7 @@ public class VendingTest {
     @Test
     public void shouldChangeMoney() {
         machine.changeMoney();
-        verify(moneyHandler).changeMoney();
+        verify(moneyHandler).changeMoney(anyDouble());
         verify(display).show("Please take your change.");
     }
 
