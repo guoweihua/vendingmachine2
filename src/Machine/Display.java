@@ -1,10 +1,7 @@
-package Machine;
+package machine;
 
-public class Display {
+public interface Display {
+    public String show(String message);
 
-    public void show(String string) {
-        System.out.println();
-
-    }
-
+	public String showMoney(double change); 
 }

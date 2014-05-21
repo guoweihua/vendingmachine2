@@ -1,4 +1,4 @@
-package Machine;
+package machine;
 
 public class MoneyHandler {
 

@@ -1,10 +1,9 @@
-package Machine;
+package machine;
 
-public class ItemHandler {
+public interface ItemHandler {
 
-    public void dispenseItem() {
-        // TODO Auto-generated method stub
-
-    }
+    public void dispenseItem();
+    
+    public void dispenseChips(Chips chips);
 
 }
