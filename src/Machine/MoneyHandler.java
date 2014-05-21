@@ -1,16 +1,11 @@
 package machine;
 
-public class MoneyHandler {
+public interface MoneyHandler {
 
+    public void receiveMoney(double amount);
 
-    public void receiveMoney(double amount) {
-        // TODO Auto-generated method stub
+    public void changeMoney(double amountDispensed);
 
-    }
-
-    public void changeMoney() {
-        // TODO Auto-generated method stub
-
-    }
+    public double getAmount();
 
 }

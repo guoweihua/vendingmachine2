@@ -25,7 +25,7 @@ public class Machine {
     }
 
     public void changeMoney() {
-        moneyHandler.changeMoney();
+        moneyHandler.changeMoney(1.0);
         display.show("Please take your change.");
 
     }
