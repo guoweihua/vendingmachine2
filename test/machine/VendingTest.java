@@ -35,9 +35,10 @@ public class VendingTest {
 
     @Test
     public void shouldAcceptCertainAmountOfMoney() {
-        double amount = 1.00;
-        machine.receivedMoney(amount);
-        verify(moneyHandler).receiveMoney(amount);
+        Payment payment = new MachineMoneyHandlerPayment();
+        payment.setAmount(1.0);
+        machine.receivedMoney(payment);
+        verify(moneyHandler).receiveMoney(payment);
         verify(display).show("money 1.0 inserted.");
     }
 

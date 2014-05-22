@@ -12,9 +12,9 @@ public class Machine {
     	this.itemHandler = itemHandler;
     }
 
-    public Object receivedMoney(double amount) {
-        moneyHandler.receiveMoney(amount);
-        display.show("money " + amount + " inserted.");
+    public Object receivedMoney(Payment payment) {
+        moneyHandler.receiveMoney(payment);
+        display.show("money " + payment.amount() + " inserted.");
         return null;
     }
 
