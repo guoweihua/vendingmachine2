@@ -5,14 +5,6 @@ public class MachineMoneyHandler implements MoneyHandler {
     private double amount = 0;
 
     @Override
-<<<<<<< HEAD
-=======
-    public void receiveMoney(double amount) {
-        this.amount += amount;
-    }
-
-    @Override
->>>>>>> 8deaa732108d0f69a86baebcf35c0d134c86739f
     public void changeMoney(double amount) {
         this.amount -= amount;
     }
@@ -22,11 +14,10 @@ public class MachineMoneyHandler implements MoneyHandler {
         return this.amount;
     }
 
-<<<<<<< HEAD
 	@Override
 	public void receiveMoney(Payment payment) {
-		// TODO Auto-generated method stub
 		verifyPayment(payment);
+		amount += payment.amount();
 	}
 
 	@Override
@@ -35,6 +26,4 @@ public class MachineMoneyHandler implements MoneyHandler {
 		return false;
 	}
 
-=======
->>>>>>> 8deaa732108d0f69a86baebcf35c0d134c86739f
 }

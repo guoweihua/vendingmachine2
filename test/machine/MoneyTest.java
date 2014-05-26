@@ -6,7 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class MoneyTest {
-    private MoneyHandler moneyHandler;
+    private static final double PRECISION = 0.001;
+	private MoneyHandler moneyHandler;
 
     @Before
     public void setup() {
@@ -15,11 +16,11 @@ public class MoneyTest {
 
     @Test
     public void receiveShouldIncreaseAmount() {
-        double amountInput = 1.0;
+        Payment payment = new MachineMoneyHandlerPayment();
         double amountBefore = moneyHandler.getAmount();
-        moneyHandler.receiveMoney(amountInput);
+        moneyHandler.receiveMoney(payment);
 
-        assertEquals(amountInput, moneyHandler.getAmount() - amountBefore, 0.001);
+        assertEquals(payment.amount(), moneyHandler.getAmount() - amountBefore, PRECISION);
     }
 
     @Test
