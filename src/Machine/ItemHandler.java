@@ -6,4 +6,6 @@ public interface ItemHandler {
     
     public void dispenseChips(Chips chips);
 
+    public boolean isValidItem(String itemName);
+
 }

@@ -1,5 +1,6 @@
 package machine;
 
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
 
 import org.junit.Before;
@@ -23,7 +24,22 @@ public class ItemTest {
         handler = new MachineItemHandler(machineBin);
     }
 	
-	@Test
+    @Test
+    public void shouldReturnTrueIfChips() {
+        assertTrue(handler.isValidItem("chips"));
+    }
+
+    @Test
+    public void shouldReturnTrueIfSoda() {
+        assertTrue(handler.isValidItem("soda"));
+    }
+
+    @Test
+    public void shouldReturnFalseIfValidItem() {
+        assertFalse(handler.isValidItem("pizza"));
+    }
+
+    @Test
 	public void shouldDispenseItem() {
 		handler.dispenseItem();
 		

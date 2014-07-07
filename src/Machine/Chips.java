@@ -1,10 +1,10 @@
 package machine;
 
 public class Chips implements Item {
+    public static String name = "chips";
 
 	public String itemName() {
-		// TODO Auto-generated method stub
-		return null;
+        return name;
 	}
 
 }
