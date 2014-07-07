@@ -17,6 +17,7 @@ public class MachineItemHandler implements ItemHandler {
     private void addItems() {
         items.add(new Soda());
         items.add(new Chips());
+        items.add(new Candy());
     }
 
 	public void dispenseItem() {

@@ -35,6 +35,11 @@ public class ItemTest {
     }
 
     @Test
+    public void shouldReturnTrueIfCandy() {
+        assertTrue(handler.isValidItem("candy"));
+    }
+
+   @Test
     public void shouldReturnFalseIfValidItem() {
         assertFalse(handler.isValidItem("pizza"));
     }
