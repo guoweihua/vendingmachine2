@@ -1,13 +1,24 @@
 package machine;
 
-public interface MoneyHandler {
+public class MoneyHandler {
+	private double amountInMachine = 0.0;
+	
+	public double buy(double inputMoney, double amountToCharge) {
+		double change = inputMoney - amountToCharge;
+		amountInMachine += amountToCharge;		
+		return change;
+	}
 
-    public void receiveMoney(Payment payment);
+	public boolean isEnoughMoneyForItem(double moneyAmount, double itemPrice) {
+		if(moneyAmount < itemPrice) return false;
+		else return true;
+	}
 
-    public void changeMoney(double amountDispensed);
+	public double getTotal() {
+		return amountInMachine;
+	}
 
-    public double getAmount();
-
-	public boolean verifyPayment(Payment payment);
-
+	public void setTotal(double total) {
+		this.amountInMachine = total;
+	}
 }

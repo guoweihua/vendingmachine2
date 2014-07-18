@@ -2,6 +2,7 @@ package machine;
 
 public interface Item {
 
-	public String itemName();
+	public String getName();
+	public double getPrice();
 	
 }
